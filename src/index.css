@@ -1,0 +1,72 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make sure text is always visible */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* LIGHT MODE */
+body.light {
+  background-color: white;
+  color: black;
+}
+
+/* DARK MODE */
+body.dark {
+  background-color: #121212 !important; /* Darker background */
+  color: white !important; /* Ensure text remains white */
+}
+
+/* Force headings and paragraphs to inherit color */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  color: inherit !important;
+}
+
+/* BUTTON STYLES */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.3s, color 0.3s;
+}
+
+/* Light mode button */
+body.light button {
+  background-color: #f9f9f9;
+  color: black;
+}
+
+/* Dark mode button */
+body.dark button {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+body.dark button:hover {
+  border-color: #646cff;
+} 
+/* Position Theme Toggle in the top-right */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
